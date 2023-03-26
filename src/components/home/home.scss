@@ -1,0 +1,62 @@
+.logo {
+  display: block;
+  margin: 100px;
+  float: left;
+  width: 600px;
+}
+
+.noi {
+  font-family: 'Nunito', sans-serif;
+  color: whitesmoke;
+  font-size: 15px;
+  position: absolute;
+  top: 38%;
+  right: 250px;
+  transform: translate(0, -50%);
+}
+
+.noi_p {
+  font-family: 'Nunito', sans-serif;
+  color: whitesmoke;
+  font-size: 15px;
+  width: 15em;
+  position: absolute;
+  top: 50%;
+  right: 150px;
+  transform: translate(0, -50%);
+}
+
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .logo {
+    width: 200px;
+    margin: 50px;
+  }
+
+  .noi {
+    right: 100px;
+    top: 28%;
+  }
+
+  .noi_p {
+    right: 50px;
+    width: 10em;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    margin: 25px;
+  }
+
+  .noi {
+    right: 50px;
+  }
+
+  .noi_p {
+    right: 25px;
+    width: 8em;
+    font-size: 12px;
+  }
+}
