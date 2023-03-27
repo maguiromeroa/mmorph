@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom/client';
 //import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { I18nextProvider } from 'react-i18next';
+import i18n from './locales/i18n.jsx';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
-  <HashRouter
-  // basename={optionalString}
-  // getUserConfirmation={optionalFunc}
-  // hashType={optionalString}
->
+  <I18nextProvider i18n={i18n}>
+  <BrowserRouter>
   <App />
-</HashRouter>
+</BrowserRouter>
+</I18nextProvider>
   
 );
 

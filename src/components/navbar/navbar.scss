@@ -1,6 +1,6 @@
 // Define variables
 
-$nav-text-color: #fff;
+$nav-text-color: whitesmoke;
 
 // Define mixin for shared styles
 @mixin navbar-link {
@@ -10,18 +10,30 @@ $nav-text-color: #fff;
   text-decoration: none;
 }
 
-
+// .navbar-links a:visited {
+//   color: pink;
+// }
 
 // Define navbar styles
 .navbar {
   display: flex;
- justify-content: center;
+  justify-content: center;
   align-items: center;
   padding: 30px;
   color: whitesmoke;
-  font-size: 10px;
+  font-size: 15px;
   font-family: 'Nunito', sans-serif;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 10px;
+  }
 }
+
+.navbar-links li:hover a {
+  color: rgb(97, 233, 246);
+text-shadow: 2px 2px 4px rgb(6, 130, 130);
+}
+
 
 // Define logo styles
 // .navbar-logo {
@@ -33,12 +45,15 @@ $nav-text-color: #fff;
 .navbar-links {
   display: flex;
   list-style: none;
- margin-left: 2em;
+  margin-left: 2em;
   padding: 0;
 
   li {
     margin: 0;
     padding: 0;
+    @media (max-width: 768px) {
+      margin-bottom: 10px;
+    }
   }
 
   a {
